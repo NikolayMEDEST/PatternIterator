@@ -2,7 +2,6 @@ import java.util.PriorityQueue;
 
 public class Main {
 
-
     public static void main(String[] args) {
 
         for (int r : new Randoms(90, 101)) {

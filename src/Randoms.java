@@ -3,14 +3,14 @@ import java.util.Random;
 
 public class Randoms implements Iterable<Integer> {
 
-       protected Random random;
-       int max;
-       int min;
+    protected Random random;
+    private int max;
+    private int min;
 
     public Randoms(int min, int max) {
         this.random = new Random();
-           this.max = max;
-           this.min = min;
+        this.max = max;
+        this.min = min;
     }
 
     @Override
@@ -20,14 +20,12 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public boolean hasNext() {
-                    return true;
+                return true;
             }
 
             @Override
             public Integer next() {
-                while (true) {
-                    return random.nextInt(max - min) + min;
-                }
+                return random.nextInt(max - min) + min;
             }
         };
     }
